@@ -2,6 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import T from './components/T.js'
+import Wrap from './components/Wrap.js'
+import InnerComponent from './components/innerComponent.js'
+
+
+const WrapedComponent = Wrap(InnerComponent);
+
 
 function App() {
   return (
@@ -20,7 +26,9 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <T />
+      {/* <T /> */}
+      <InnerComponent />
+      <WrapedComponent title='高阶组件测试' />
     </div>
   );
 }
